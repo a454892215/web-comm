@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>一级标题</h1>
+    <H2>2级标题</H2>
+    <h3>3级标题</h3>
+    <h4>4级标题</h4>
+    <h5>5级标题</h5>
+    <h6>6级标题</h6>
+
+    <p>我是段落标签=我是段落标签-我是段落标签-我是段落我是段落标签我是段落标签我是段落标签我是段落标签我是段落标签我是段落标签我是段
+        落标签我是段落标签</p>
+
+    <p>我是段落标签=我是段落标签-我是段落标签-我是段落我是段落标签我是段落标签我是段落标签我是段落
+        标签我是段落标签我是段落标签我是段落标签我是段落标签我是段落标签我是段落标签我是段落标签我是段落标签我是
+        落标签我是段落标签</p>
+
+    行内文字修饰标签<br>
+    <b>B标签-加粗</b>
+    <strong>strong标签-加粗</strong>
+
+    <u>u标签-下划线</u>
+    <ins>ins标签-下划线</ins>
+
+    <i>i标签-倾斜</i>
+    <em>em标签-倾斜</em>
+
+    <s>s标签-删除线</s>
+    <del>del标签-删除线</del>
+
+    <img src="pic-01.jpeg" alt="图片1-无图显示的提示文字" width="200" title="title 鼠标悬停显示1">
+    <img src="pic-02.jpeg" alt="图片2-无图显示的提示文字" width="200" title="title 鼠标悬停显示2">
+    <br>
+    <!-- controls 显示音频播放控件 autoplay 自动播放，部分浏览器不支持。 loop 循环播放  mp3 wav ogg 推荐MP3 其他格式有兼容问题-->
+    <audio src="game_start.mp3" controls autoplay loop></audio>
+    <!-- google 浏览器可以让视频自动播放 但是需要加上muted静音 controls autoplay loop 三个属性和audio相同 -->
+    <video src="./forest-moring.mp4" controls autoplay muted loop width="300"></video>
+    <a href="https://www.baidu.com"> 当前页面跳转</a>
+    <a href="https://www.baidu.com" target="_blank"> 其他页面跳转</a>
+    <a href="#"> 空链接</a>
+
+    <h4>三种列表标签</h4>
+    <!-- 无序列表标签 ul li -->
+    <h5>无序列表标签</h4>
+        <ul>
+            <li>香蕉</li>
+            <li>苹果</li>
+            <li>葡萄</li>
+        </ul>
+
+        <!-- 有序列表标签 ol li  ol只能包含li li标签可以包含任何内容-->
+        <h5>有序列表标签</h4>
+            <ol>
+                <li>香蕉</li>
+                <li>苹果</li>
+                <li>葡萄</li>
+            </ol>
+
+            <!-- 自定义列表标签 dl dt:标题 dd:内容  dl 中只能包含 dt dd,  dt dd可以包含任意内容-->
+            <h5>自定义列表标签</h4>
+                <dl>
+                    <dt>水果</dt>
+                    <dd>苹果</dd>
+                    <dd>葡萄</dd>
+                    <dd>香蕉</dd>
+                </dl>
+
+                <h4> 表格标签table->tr->td </h4>
+                <table border="6" width="400" height="200">
+                    <caption>员工信息</caption>
+                    <tr>
+                        <th>姓名</th>
+                        <th>年龄</th>
+                        <th>性别</th>
+                    </tr>
+                    <tr>
+                        <td>张三</td>
+                        <!-- rowspan合并2行 -->
+                        <td rowspan="2">22</td>
+                        <td>男</td>
+                    </tr>
+                    <tr>
+                        <td>张三</td>
+        
+                        <td>男</td>
+                    </tr>
+                    <tr>
+                        <td>张三</td>
+                        <td>22</td>
+                        <td>男</td>
+                    </tr>
+                    <tr>
+                           <!-- rowspan合并3列 -->
+                        <td colspan="3">都是张三</td>
+                    </tr>
+                </table>
+</body>
+
+</html>
