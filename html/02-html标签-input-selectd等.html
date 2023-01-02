@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- input 标签 -->
+    文本框： <input type="text" placeholder="请输入用户名"> <br>
+    密码框： <input type="password" placeholder="请输入密码"><br>
+
+    <!--type="radio" 时候 name相同为一组  checked选中-->
+    性别： <input type="radio" name="sex" id="nan"><label for="nan">男</label>
+    <input type="radio" name="sex" checked id="nv"><label for="nv">女</label> <br>
+
+    <!-- label 使点击内容也能切换状态 -->
+    <label ><input type="checkbox" checked>复选框</label><br>
+    <input type="file">单选文件<br>
+    <input type="file" multiple>多选文件<br>
+
+    <!-- submit 提交表单  reset重置表单 这两个需要配合form标签使用。 button 普通按钮. google浏览器中button默认是提交按钮-->
+    <input type="submit" value="提交"><br>
+    <input type="reset" value="重置"><br>
+    <input type="button" value="普通按钮"><br>
+    <br><br><br>
+    <form action="/">
+        <!-- submit 提交表单  reset重置表单 这两个需要配合form标签使用。 button 普通按钮标签-->
+        <!-- input 标签 -->
+        文本框： <input type="text" placeholder="请输入用户名"> <br>
+        密码框： <input type="password" placeholder="请输入密码"><br>
+        <input type="submit" value="提交"><br>
+        <input type="reset" value="重置"><br>
+        <input type="button" value="普通按钮"><br>
+        <button>普通按钮标签</button>
+
+    </form>
+    <br><br><br>
+    <select name="names" id="namesId">
+        <option>张三</option>
+        <option>第三</option>
+        <option selected>二哥</option>
+    </select>
+
+    <!--无语义标签： div 标签 占一行  span标签 行内标签 -->
+    <div>div标签</div>
+    <div>div标签</div>
+    <span>span标签</span> <span>span标签</span>
+</body>
+
+</html>
