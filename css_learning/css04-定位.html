@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<!-- 
+        3. 定位：
+         1. 可以让元素自由摆放在网页任意位置
+         2. 一般用于盒子间的层叠情况
+         3. 定位后的元素层级最高，可以层叠在其他盒子上面.
+         4. 可以让盒子始终固定在屏幕中的某个位置.
+       定位方式：position: static
+         1. 静态定位： static  默认值，标准流
+         2. 相对定位： relative  没有脱离标准流
+         3. 绝对定位:  absolute
+         4. 固定定位： fixed
+
+         相对定位：   position: relative;
+         1. 需要配合方位属性(如  left: 20px;)实现移动.
+         2. 相对自己原来位置进行移动.
+         3. 在页面中占位置，没有脱标.
+
+         绝对定位： 拼爹型定位，相对非静态定位的父元素进行定位
+              查找父元素方式：就近原则，找不到则取浏览器窗口定位.
+               代码：  position: absolute;
+               特点：
+                   需要配合方位属性实现移动
+                   默认相对于浏览器可视区域进行移动
+                   在页面中不占位置-脱标
+               应用： 子绝父相
+ -->
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    .d1 {
+        width: 200px;
+        height: 100px;
+        background-color: aqua;
+        position: relative;
+        left: 20px;
+        top: 0px;
+        text-align: center;
+    }
+
+    .d2 {
+        width: 200px;
+        height: 100px;
+        background-color: aqua;
+        position: absolute;
+        right: 20px;
+        top: 0px;
+    }
+
+    /* 子绝父相示例 */
+    .p{
+        width: 200px;
+        height: 200px;
+        background-color: yellowgreen;
+        position: relative;
+        margin: 0 auto;
+    }
+    .c{
+        width: 100px;
+        height: 100px;
+        background-color: red;
+        position: absolute;
+        left: 10px;
+        top: 10px;
+    }
+</style>
+
+<body>
+
+    <div class="d1">d1内容</div>
+    <div class="d2">d2内容</div>
+
+    <div class="p">
+        <div class="c"></div>
+    </div>
+</body>
+
+</html>
