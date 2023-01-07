@@ -24,13 +24,13 @@
             2. 无衬线字体：文字笔画粗细均匀，首尾无装饰:  如：sans-serif , 黑体，Arial
             3. 衬线字体：文字笔画粗细不均匀，首尾有装饰: 如：serif, 宋体， Times New Roman
              */
-             /* 依次查找，如果电脑没有安装就任意一种非衬线字体 */
-            font-family: 微软雅黑, 黑体, sans-serif; 
+            /* 依次查找，如果电脑没有安装就任意一种非衬线字体 */
+            font-family: 微软雅黑, 黑体, sans-serif;
             /* 首行缩进2个字符宽度 */
             text-indent: 2em;
         }
 
-        .p2{
+        .p2 {
             /* 水平对齐属性：text-align: center 能让哪些元素水平居中？
             1. 文本
             2. span标签， a标签
@@ -49,7 +49,8 @@
 
             /* div p h 大盒子标签水平居中的方法： margin： 0  auto */
         }
-        .d1{
+
+        .d1 {
             width: 300px;
             height: 300px;
             margin: 0 auto;
@@ -58,11 +59,12 @@
             line-height: 300px;
 
         }
-        .d2{
+
+        .d2 {
             width: 400px;
             height: 400px;
             background-image: url('./../html_learning/pic-02.jpeg');
-           
+
             /*background-repeat background-position 
              background: pink url('./../html_learning/pic-01.jpeg') no-repeat center bottom;
             */
@@ -92,7 +94,7 @@
           display:inline-block  转成行内块元素
           display:inline   转成行内元素   
         */
-         
+
 
         /* 
          标签嵌套：
@@ -101,7 +103,7 @@
           特殊： a标签可以嵌套任意标签，但是不能嵌套a标签
          */
 
-         /* 
+        /* 
          CSS的三大特性
 
          CSS的继承性： 文字控制的属性都可以继承
@@ -118,19 +120,25 @@
           权重叠加计算：每级之间不存在进位，!important>行类样式个数>iD选择器个数>类选择器个数>标签选择器个数
           */
 
-          /* 
+        /* 
           盒子模型：盒子的概念
           1. 页面中的每个标签都可以看作一个盒子，css中规定每个盒子都是由:
            内容区域content，内边距区域padding，边框区域border，外边距区域margin.构成，这就是盒子模型.
           2. 盒子的内容区域为 width 和 height 对应的区域. 
           */
 
-          /* border: 10px solid #000;
+        /* border: 10px solid #000;
              padding 10px 10px 10px 10px;  上 右 左 下
              padding 10px 10px 10px; 上 左右 下
              padding 10px 10px; 上下 左右
           
           */
+
+        /* 清除 CSS默认样式的京东写法 */
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
     </style>
 </head>
 
