@@ -7,7 +7,7 @@
     <title>Document</title>
 </head>
 <style>
-    /* 普通盒子模型:
+    /* 普通盒子模型1:
       width和width对应的区域是 content
      */
 .d1{
@@ -23,7 +23,7 @@
     margin: 10px;
 }
 
-/*   box-sizing: border-box; 盒子模型：
+/*   box-sizing: border-box; 盒子模型2：
      width和width对应的区域是 content + padding + border
  */
 .d2{
@@ -39,6 +39,19 @@
     margin: 10px;
     box-sizing: border-box;
 }
+
+/* 外边距折叠现象：合并现象
+   1. 垂直布局的块级元素，上下的margin会合并，最终距离为margin的最大值
+      处理办法： 只给其中一个盒子设置margin
+
+   2. 外边距折叠现象：塌陷现象：互相嵌套的块级元素，子元素的margin-top会作用在父元素上，导致父元素一起向下移动。
+   解决：1. 给父元素设置border-top, 或者padding-top
+         2. 给父元素十二猴子overflow: hiden
+         3. 转换成行内块元素 display: inline-block;
+         4. 设置浮动
+    3. 行内元素（如：span）的pading/margin上下间距不生效
+
+*/
 </style>
 <body>
     
