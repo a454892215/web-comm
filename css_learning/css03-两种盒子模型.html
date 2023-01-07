@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    /* 普通盒子模型:
+      width和width对应的区域是 content
+     */
+.d1{
+    display: inline-block;
+    width: 200px;
+    height: 200px;
+    color:black;
+    background-color: blanchedalmond;
+    text-align: center;
+    /* 背景颜色也会填充到padding */
+    padding: 50px;
+    border: 10px solid #ccc;
+    margin: 10px;
+}
+
+/*   box-sizing: border-box; 盒子模型：
+     width和width对应的区域是 content + padding + border
+ */
+.d2{
+    display: inline-block;
+    width: 200px;
+    height: 200px;
+    color:black;
+    background-color: blanchedalmond;
+    text-align: center;
+    /* 背景颜色也会填充到padding */
+    padding: 50px;
+    border: 10px solid #ccc;
+    margin: 10px;
+    box-sizing: border-box;
+}
+</style>
+<body>
+    
+    <div class="d1">普通盒子模型</div>
+    <div class="d2">border-box盒子模型</div>
+</body>
+</html>
