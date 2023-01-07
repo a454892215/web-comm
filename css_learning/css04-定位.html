@@ -18,7 +18,7 @@
          1. 静态定位： static  默认值，标准流
          2. 相对定位： relative  没有脱离标准流
          3. 绝对定位:  absolute
-         4. 固定定位： fixed
+         4. 固定定位： fixed  脱标，相对浏览器窗口定位，具备行内块特点
 
          相对定位：   position: relative;
          1. 需要配合方位属性(如  left: 20px;)实现移动.
@@ -33,6 +33,11 @@
                    默认相对于浏览器可视区域进行移动
                    在页面中不占位置-脱标
                应用： 子绝父相
+
+         固定定位：  position: fixed;  
+           脱标，相对浏览器窗口定位，具备行内块特点   
+           z-index: 整数; 取值越大，显示顺序越考上.z-index配合定位才生效.
+
  -->
 <style>
     * {
@@ -52,12 +57,17 @@
 
     .d2 {
         width: 200px;
-        height: 100px;
-        background-color: aqua;
+        height: 200px;
+        background-color: pink;
         position: absolute;
-        right: 20px;
+        /*  绝对定位不能使用margin 0 auto;水平居中， 而使用 left: 50%; margin-left: -元素宽度的一半;水平居中 */
+        left: 50%;
+        /* 位移自己宽高的一半，避免使用margin-left需要计算 */
+        transform: translate(-50%, 0);
+        /* margin-left: -100px; */
         top: 0px;
     }
+
 
     /* 子绝父相示例 */
     .p{
@@ -81,6 +91,7 @@
 
     <div class="d1">d1内容</div>
     <div class="d2">d2内容</div>
+
 
     <div class="p">
         <div class="c"></div>
