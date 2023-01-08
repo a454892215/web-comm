@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    * {
+        margin: 0px;
+        padding: 0px;
+    }
+
+    /* 
+     1.1. div 中居中img的方式： 
+         1.设置div的 line-height为自身高度，
+         2. 设置img vertical-align: middle
+      */
+    .d1 {
+        width: 360px;
+        height: 90px;
+        line-height: 90px;
+        background-color: #ccc;
+    }
+
+    .d1 img {
+        height: 50px;
+        vertical-align: middle;
+    }
+
+    /* 
+   1.2. input 不需要再设置   vertical-align: middle; 否则会偏移？？
+    .d1 input {
+        vertical-align: middle;
+    } */
+
+
+    /* 2. 使盒子内的两个input text和button 标签 高度相同标签对齐*/
+    .d2 input {
+        height: 50px;
+        box-sizing: border-box;
+        vertical-align: top;
+    }
+
+    .d2 {
+        width: 300px;
+        height: 60px;
+        margin-top: 10px;
+        background-color: pink;
+    }
+
+    .d3 {
+        width: 300px;
+        background-color: rgb(239, 165, 68);
+    }
+
+    .d3 img {
+        height: 60px;
+        /*
+        3. 因为基线对齐， 造成被img成高的父盒子底部留有间隙的处理办法;1. 设置img属性： 
+        1.  display: block; 
+        2.  vertical-align: middle;
+        */
+        /* display: block; */
+        vertical-align: middle;
+    }
+</style>
+
+<body>
+
+</body>
+
+
+<div class="d1"><img src="../img/pic-02.jpeg" alt=""><input type="text"></div>
+
+<div class="d2"> <input type="text"><input type="button" value="按钮"></div>
+
+<div class="d3"><img src="../img/pic-01.jpeg"></div>
+
+</html>
