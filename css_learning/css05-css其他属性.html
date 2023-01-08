@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- 移动端需要 -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
@@ -84,7 +85,11 @@
        4. display: none; 不占位隐藏.
        5. 表格边框合并: 给table标签添加 border-collapse: collapse;
        6. 焦点选择器: input:focus{}  获取焦点时候的状态
-       7. 属性选择器: 1. E[attr]   2. E[attr=""]
+       7. 属性选择器: 1. E[attr]   2. E[attr=""]  如: input[type='text']{}
+       8. background 和backgroud-size连写同时设置,需要注意覆盖问题
+       9. background-size:宽度,高度; 数字+px/百分比(相对自身)/contain/cover;
+       10. box-shadow: 10px 10px 20px 10px green inset;盒子阴影; 注意,外阴影不能添加outset;内阴影 shez insert
+       11. 过渡: transition: width 1s, background-color 2s; 或 transition: all 2s; all表示所有属性
      */
 
 
@@ -94,6 +99,18 @@
         background-color: yellowgreen;
         cursor: pointer;
         border-radius: 5px 5px 5px 5px;
+    }
+
+    .box1{
+        width: 200px;
+        height: 200px;
+        background-color: #ccc;
+        transition-property: background-color, transform;
+        transition-duration: 2s;
+    }
+    .box1:hover{
+       background-color: blue;
+       transform: translate(100px);
     }
 </style>
 
@@ -110,4 +127,6 @@
 
 <div class="d4">鼠标光标类型演示</div>
 
+
+<div class="box1"></div>
 </html>
