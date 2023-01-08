@@ -66,6 +66,35 @@
         /* display: block; */
         vertical-align: middle;
     }
+    /* 
+    cursor: ;
+        1. pointer 手型
+        2. text 工字型表示可以复制
+        3. move 十字形, 表示可以移动
+    */
+
+    /* 
+      1. opacity: 透明度
+      2. overflow 其他属性
+         1. visible 默认值 溢出部分可见
+         2. hiddden 溢出部分隐藏
+         3. scroll 无论是否溢出,都显示滚动条
+         4. atuo 根据是否溢出, 自动显示隐藏滚滚动条
+       3. visibility:hidden; 占位隐藏
+       4. display: none; 不占位隐藏.
+       5. 表格边框合并: 给table标签添加 border-collapse: collapse;
+       6. 焦点选择器: input:focus{}  获取焦点时候的状态
+       7. 属性选择器: 1. E[attr]   2. E[attr=""]
+     */
+
+
+    .d4{
+        width: 80px;
+        height: 80px;
+        background-color: yellowgreen;
+        cursor: pointer;
+        border-radius: 5px 5px 5px 5px;
+    }
 </style>
 
 <body>
@@ -78,5 +107,7 @@
 <div class="d2"> <input type="text"><input type="button" value="按钮"></div>
 
 <div class="d3"><img src="../img/pic-01.jpeg"></div>
+
+<div class="d4">鼠标光标类型演示</div>
 
 </html>
