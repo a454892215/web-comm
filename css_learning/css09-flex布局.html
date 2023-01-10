@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<!-- 1. Flex是浏览器提倡的布局模型. 
+     2. 布局网页更简单灵活
+     3. 避免浮动脱标问题
+     4. 布局方案的选择，flex优先浮动。移动端flex不需要考虑兼容问题，PC端需要考虑低版本兼容问题
+        标签 api 兼容查看 www.caniuse.com
+ -->
+
+<!-- 
+     给父元素添加属性： 
+         display: flex
+         主轴： 默认从左到右
+         交轴： 默认从上到下
+
+
+  -->
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    /*      0. display: flex; 声明使用flex布局
+            1. justify-content: 调整主轴方向排列顺序。
+                   flex-start: 默认值，盒子从左到右排列
+                   flex-end:  盒子从右到做排列
+                   center  使所有子盒子水平居中
+                   space-between  盒子间距相同, 盒子到父窗体左右两边间距是0px
+                   space-between 盒子间距相同, 盒子到父窗体左右两边间距是盒子间距离的一半
+                   space-evenly 盒子间距相同, 盒子间的间距和盒子到父窗体的间距也相同
+            
+            2. align-items: flex-start; 修改交轴对齐方式
+                   flex-start 有高度 默认值；从上开始排列  
+                   flex-end  从下开始排列
+                   center 交轴 居中
+                   stretch 无高度 默认值。交轴拉伸， 子元素去掉height属性生效
+
+            3. align-self: 子元素设置，单独设置某个盒子的交轴对齐方式     
+            
+            4. flex: 整数值; 占用父级剩余尺寸， 类似权重：
+               */
+    .box1 {
+        /* 添加此属性后，水平排列子盒子 */
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        padding: 10px 0px;
+        height: 250px;
+        background-color: green;
+    }
+
+    .box1 div {
+        width: 100px;
+        height: 100px;
+    }
+
+    .box1 div:nth-child(2) {
+        /* align-self 示例 */
+        align-self: flex-start;
+    }
+
+    .box1 div:nth-child(2n + 1) {
+        background-color: red;
+    }
+
+    .box1 div:nth-child(2n) {
+        background-color: blue;
+    }
+
+    /* 2. flex 子元素大小包裹内容演示 */
+    .box2 {
+        margin-top: 10px;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        padding: 10px 0px;
+        height: 250px;
+        background-color: green;
+    }
+    /* 子元素不给宽高，不设置stretch 则子元素宽高默认包裹内容 */
+    .box2 div{
+        padding: 10px;
+    }
+
+    .box2 div:nth-child(2n + 1) {
+        background-color: red;
+    }
+
+    .box2 div:nth-child(2n) {
+        background-color: blue;
+    }
+
+    .box3 {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        padding: 10px 0px;
+        width: 300px;
+        height: 250px;
+        margin-top: 10px;
+        background-color: green;
+    }
+    /* 3. flex 使用演示 */
+    .box3 div:nth-child(1) {
+        flex: 1;
+    }
+
+    .box3 div:nth-child(2) {
+        flex: 2;
+    }
+    .box3 div:nth-child(3) {
+        flex: 3;
+    }
+
+
+    .box3 div:nth-child(2n + 1) {
+        background-color: red;
+    }
+
+    .box3 div:nth-child(2n) {
+        background-color: blue;
+    }
+</style>
+
+<body>
+    <div class="box1">
+        <div>12345</div>
+        <div>12345</div>
+        <div>12345</div>
+        <div>12345</div>
+        <div>12345</div>
+    </div>
+
+    <div class="box2">
+        <div>12345</div>
+        <div>12345</div>
+        <div>12345</div>
+        <div>12345</div>
+        <div>12345</div>
+    </div>
+
+    <div class="box3">
+        <div>123</div>
+        <div>123</div>
+        <div>123</div>
+    </div>
+
+
+
+</body>
+
+</html>
