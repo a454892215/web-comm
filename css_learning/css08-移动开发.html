@@ -9,25 +9,50 @@
 <!-- 百分比布局：也叫流式布局
                 宽度自适应，高度固定.
                 比较旧的布局适配方案
+
+ rem适配：没有钱rem适配方案中，把网页分成10分，html标签字号的位视口宽度的1/10； 
+         1rem = html标签字号大小      
+         
+         把设计稿的尺寸px,转化为对应的rem数值.
+         rem值 = px/设计稿视口 * 10
  -->
 <style>
-    *{
+    @media(width:320px) {
+        html {
+            font-size: 32px;
+        }
+    }
+
+    @media(width:375px) {
+        html {
+            font-size: 37.5px;
+        }
+    }
+
+    @media(width:414px) {
+        html {
+            font-size: 41.4px;
+        }
+    }
+/*  很难穷举所有不同手机型号视口 @media..
+    使用flexible.js 框架处理视口代码
+*/
+    * {
         margin: 0;
         padding: 0;
     }
 
-    .box1{
+    .box1 {
         width: 100%;
         height: 50px;
         background-color: red;
     }
 
-    .box1 .box2{
+    .box1 .box2 {
         width: 50%;
         height: 50%;
         background-color: blue;
     }
-   
 </style>
 
 <body>
