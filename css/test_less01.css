@@ -1,0 +1,9 @@
+.box {
+  width: 32 rem;
+  height: 8.33333333 rem;
+}
+.box .box2 {
+  width: 15 rem;
+  height: 5 rem;
+  background-color: aqua;
+}
