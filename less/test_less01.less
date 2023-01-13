@@ -1,9 +1,13 @@
+
+// 声明变量
+@baseSize: 37.5rem;
+
 .box{
-    width: (20 + 12)rem;
-    height: (100 / 12)rem;
+    width: (20rem + 20rem);
+    height: (100 / @baseSize);
     .box2{
-        width: (10 + 5)rem;
-        height: (100 / 20)rem;
+        width: (10rem + 15rem);
+        height: (100rem / 20rem);
         background-color: aqua;
     }
 }
