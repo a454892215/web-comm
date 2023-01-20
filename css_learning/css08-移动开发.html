@@ -46,6 +46,13 @@
             font-size: 41.4px;
         }
     }
+    /* 媒体查询，视口窗口小于指定值隐藏 */
+    @media(max-width:300px) {
+       .box1 .title{
+        display: none;
+       }
+    }
+
 /*  很难穷举所有不同手机型号视口 @media..
     使用flexible.js 框架处理视口代码
 */

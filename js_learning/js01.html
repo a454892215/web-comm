@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button onclick="alert('啦啦啦')">点击我</button>
+
+    <!-- 
+        1. js书写位置：
+             01.内部js 
+             02.写</dody>标签上方 
+             03.外部js，通过src引入，script不能写内容会被忽略
+        2. 变量申明关键字：let/var。 建议统一使用let声明变量。
+           01. var可以先使用再申明（不合理）
+           02. var 申明过的变量可以重复声明（不合理）
+           03. var变量提升， 没有块级作用域等
+
+     -->
+    <script>
+        let btns = document.querySelectorAll("button");
+        // alert("你好啊...");
+        console.log("输出log了 llpp");
+        document.write("你好啊我是 document.write")
+
+        let arr = ['1', '2', '66']
+        // 基本数据类型： number string boolean undefined null
+        // 引用数据类型  object function array
+        // undefined 类型， 只申明变量而没有负值的情况下为undefined
+        // null 和 undefined 区别， null表示赋值了但是内容为null
+        // 全局变量声明 age=10 不使用声明关键字，（全局变量不提倡）
+        let abcSize; // 只申明未赋值 为undefined类型
+        let age = 18
+        let price = 12.9 // js是弱数据类型，赋值后才能确定类型
+        let name = 'tom' + 19 // 字符串拼接
+        let str1 = `abc ${name}` // 字符串模板 ``
+        console.log(typeof 123) // 获取数据类型
+        //   alert(str1);
+        // 隐式类型转换
+        console.log(10 + '10'); // 链接符 1010
+        console.log(10 - '10'); //'10' 自动转换了类型 0
+        // 显示转换
+        console.log(parseInt('100.550')) // 转换为数字类型，保留整数部分
+        console.log(parseFloat('100.550')) // 转换为数字类型保留小数, 会自动过滤非数字字符
+        console.log(Number('100.550')) // 只能传入数字类型字符，不能传入非数字类型字符， 否则返回NaN
+        let str2 = age.toString(2); // 转换为二进制string
+    </script>
+    <!--外部js  -->
+    <!-- <script src="./fileName"></script> -->
+</body>
+<!-- js脚本写在HTML标签执行后 -->
+
+</html>
