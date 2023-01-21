@@ -49,6 +49,27 @@
         console.log(parseFloat('100.550')) // 转换为数字类型保留小数, 会自动过滤非数字字符
         console.log(Number('100.550')) // 只能传入数字类型字符，不能传入非数字类型字符， 否则返回NaN
         let str2 = age.toString(2); // 转换为二进制string
+        // == 值一样就返回true  ===数据类型和值都一样才返回true， === 更常用
+        // 函数
+        function getNum(x = 2, y = 3) {
+            return x + y;
+        }
+        let fun1 = function () { }
+
+        let p1 = {
+            name: 'tom',
+            age: '18',
+            say: function () { }
+        }
+        p1.sex = 'nan' // 动态新增属性
+        console.log(p1.name);
+        // 对象也可以遍历
+        for (let item in p1) {
+            console.log("item: " + item); // 属性名
+            console.log("item value: " + p1[item]); 
+        }
+
+
     </script>
     <!--外部js  -->
     <!-- <script src="./fileName"></script> -->
