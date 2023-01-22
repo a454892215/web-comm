@@ -13,11 +13,43 @@
     <span title="title"> 标题</span>
 
     <script>
-              // DOM对象： 浏览器根据HTML标签生成的JS对象: document
+        // DOM对象： 浏览器根据HTML标签生成的JS对象: document
         document.querySelector('css选择器');
         let title = document.querySelector('.title');
         // querySelectorAll 返回伪数组， 有长度和索引，没有pop,push,需要遍历获取每个对象
         let btns = document.querySelectorAll("button");
+        /* 
+         修改dom元素内容的三种方式: 1. document.write  2.innerText  3.innerHTML
+           1. document.write只能写道body标签中， 
+           2. .innerText 只识别内容，不能解析标签
+           3. .innerHTML 能解析标签 （可以优先使用）
+           4.  let pic = document.querySelector('.img1');
+           5.   pic.src = './images'
+        */
+
+        /*  2. 通过style属性操作css  通过类名操作css  通过classList 操作css
+              对象.style.样式属性 = 值
+              let div1 = document.querySelector('.box1');
+              div1.style.backgroundColor = 'red'
+              div1.style.width = '200px'
+
+              设置元素类名：
+                1. 元素.className = 'active active2' // 注意覆盖
+                2. 元素.classList.add('类名')
+                3. 元素.classList.remove('类名')
+                3. 元素.classList.toggle('类名') // 切换一个类
+
+
+              修改不可用：
+                1. let btn = document.querySelector('.btn');
+                   btn.disabled = false // 按钮不可用
+                   radio1.checked = true // 选中
+
+              定时器函数：
+                 1. let varName =  setInterval(函数名， 1000);  // 单位毫秒
+                 2  claerInterval(varName) // 关闭清除定时器
+
+         */
 
 
     </script>
