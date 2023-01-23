@@ -55,9 +55,36 @@
                  2. 事件类型：
                     click focus blur mouseenter mouseleave keydown keyup input    
 
+              节点层级关系:
+                  let son = document.querySelector('.son');  
+                  son.parentNode.style.display = 'none' 
+                   let ul1 = document.querySelector('.ul1');  
+                   for(let i = 0; i < ul1.children.length; i++){
+                    ul1.children[i].style.color = 'red'
+                   }
+              创建元素节点：  let el = document.createElement('div')   
+              添加子元素节点： ul.appendChild(li)
+                             父元素.insetBefore(要添加的子元素， 放到那个元素的前面)
+             克隆元素节点：ul.cloneNode(true) // true表示克隆后代节点         
+             删除节点：父元素.removeChild(要删除的元素)      
+             
+             // 重绘和回流（重排）：重绘不一定回流， 回流一定会重新绘制
+             
          */
 
+     let date = new Date();
+     console.log(date.getHours())
+     console.log(date.getMinutes())
+     console.log(date.getSeconds())
+     console.log(date.getDay()) // 得到星期几 
+     // 获取时间戳： 1.getTime()  2. +new Date()  3.Date.now()
+     console.log(date.getTime())
+     console.log(+new Date())
+     console.log(+new Date('2021-7-10 11:12:12')) // 获取指定时间的时间戳
 
+
+
+     alert(date);
     </script>
     <!--外部js  -->
     <!-- <script src="./fileName"></script> -->
