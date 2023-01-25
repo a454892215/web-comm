@@ -58,7 +58,7 @@
                        key 用户按下键盘键的值 现在不提倡使用keycode
 
                  2. 事件类型：
-                    click focus blur mouseenter mousemove mouseleave keydown keyup input    
+                    click focus blur mouseenter mousemove mouseleave keydown keyup input scroll   
 
                  3. 阻止事件流动， 事件对象.stopPropagation()   
                     mouseover mouseout 会有冒泡效果
@@ -90,6 +90,12 @@
              删除节点：父元素.removeChild(要删除的元素)      
              
              // 重绘和回流（重排）：重绘不一定回流， 回流一定会重新绘制
+
+             加载事件： 当初始的HTML文档被完全加载和解析完成后，DomContentLoaded事件被触发，而无需等待样式表
+                       ，图像等完全加载
+                       事件名：DOMContentLoaded, 作用：给 document 加，监听页面DOM加载完毕: document.addEventListener('load', function(){})
+                       事件名：load 监听整个页面资源，给window加:  window.addEventListener('load', function(){})
+
              
          */
 
@@ -102,6 +108,7 @@
      console.log(date.getTime())
      console.log(+new Date())
      console.log(+new Date('2021-7-10 11:12:12')) // 获取指定时间的时间戳
+     window.addEventListener('load', function(){})
 
 
 
