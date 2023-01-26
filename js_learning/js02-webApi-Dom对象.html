@@ -25,6 +25,7 @@
            3. .innerHTML 能解析标签 （可以优先使用）
            4.  let pic = document.querySelector('.img1');
            5.   pic.src = './images'
+           6.  btn.click() 调用按钮点击事件
         */
 
         /*  2. 通过style属性操作css  通过类名操作css  通过classList 操作css
@@ -59,6 +60,7 @@
 
                  2. 事件类型：
                     click focus blur mouseenter mousemove mouseleave keydown keyup input scroll   
+                    resize DOMContentLoaded
 
                  3. 阻止事件流动， 事件对象.stopPropagation()   
                     mouseover mouseout 会有冒泡效果
@@ -103,6 +105,9 @@
                 获取元素自身宽高和padding，border.
                 offsetWidth和offsetHeight.
                 获取位置：获取元素距离自己定位父元素的左，上距离.
+             clientWidth和clientHeight:
+                当前可视区域(包含padding)，不包含滚动条边框等.
+             clientLeft和clientTop只读属性,获取左边框和上边框的宽度.
                    
 
          */
