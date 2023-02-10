@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button onclick="alert('啦啦啦')">点击我</button>
+    <span title="title"> 标题</span>
+
+    <script>
+        document.querySelector('css选择器');
+        let title = document.querySelector('.title');
+        let btns = document.querySelectorAll("button");
+
+        /**
+         * BOM 浏览器对象模型：
+         *   1. 定时器-延迟函数，只执行一次： 
+         *         let timer = setTimeout(回调函数， 等待的毫秒数)
+         *         clearTimerout(timer)
+         *         setInterval 重复执行函数。
+         *   2. JS执行机制
+         * window对象包含的五大对象（即BOM对象模型）：
+         *   1. location
+         *   2. navigator
+         *   3. history
+         *   4. document： DOM模型的基础对象
+         *   5. screen
+         *   window的所有属性函数，使用的时候可以省略window
+         * 
+
+         window.location对象常用属性
+            window.location.href（当前URL）
+            http://www.myurl.com:8866/test?id=123&username=xxx
+            1.2 window.location.protocol（协议）http:
+            1.3 window.location.host（域名 + 端口）www.myurl.com:8866
+            1.4 window.location.hostname（域名）www.myurl.com
+            1.5 window.location.port（端口）8866
+            1.6 window.location.pathname（路径部分）/test
+            1.7 window.location.search（请求的参数）返回?后面部分（包含?）?id=123&username=xxx
+            1.8 window.location.hash （返回值：#xxx）
+         */
+
+
+
+     alert(date);
+    </script>
+    <!--外部js  -->
+    <!-- <script src="./fileName"></script> -->
+</body>
+<!-- js脚本写在HTML标签执行后 -->
+
+</html>
