@@ -11,7 +11,8 @@
 <body>
     <button onclick="alert('啦啦啦')">点击我</button>
     <span title="title"> 标题</span>
-
+    <!--  data-id自定义的属性 -->
+    <a href="" data-uName="abc"></a>
     <script>
         document.querySelector('css选择器');
         let title = document.querySelector('.title');
@@ -33,7 +34,7 @@
          *   window的所有属性函数，使用的时候可以省略window
          * 
 
-         window.location对象常用属性
+         window.location对象常用属性和函数
             window.location.href（当前URL）
             http://www.myurl.com:8866/test?id=123&username=xxx
             1.2 window.location.protocol（协议）http:
@@ -43,11 +44,50 @@
             1.6 window.location.pathname（路径部分）/test
             1.7 window.location.search（请求的参数）返回?后面部分（包含?）?id=123&username=xxx
             1.8 window.location.hash （返回值：#xxx）
+            window.location对象常用方法
+            location.assign() 加载一个新的文档,就相当于一个链接，跳转到指定的url
+            location.reload() 重新加载当前文档，没有参数或者参数是false，它就会用 HTTP 头 If-Modified-Since 来检测服务器上的文档是否已改变。
+            如果文档已改变，reload() 会再次下载该文档。如果文档未改变，则该方法将从缓存中装载文档。这与用户单击浏览器的刷新按钮的效果是完全一样的。
+            如果该方法的参数为 true，那么会绕过缓存，从服务器上重新下载该文档。这与用户在单击浏览器的刷新按钮时按住 Shift 健的效果是完全一样。
+            location.replace() 用一个新文档取代当前文档,不会在 History 对象中生成一个新的记录。当使用该方法时，新的 URL 将覆盖 History 对象中的当前记录。
+
+         Navigator 对象包含有关浏览器的信息:
+          用的最多的是appName和appVersion，主要是用这两个属性判断IE的版本。 
+             appName分两种：Netscape（网景）和Microsoft Internet Explorer（IE）
+             可以看出IE11和chrome的appName是Netscape，IE版本低于11的浏览器 的appName都是Microsoft Internet Explorer
+             IE11与主流浏览器的appVersion都有些不同，所以使用时还是要根据具体情况进行判断
+             IE10以及版本低于IE10的浏览器的版本信息返回都是这样，所以在获取IE版本时可以先用split(";")，再取下标为 1的值，取到的值就可以知道浏览器的版本信息。
+
+         History对象（使用的比较少）：
+             back() 后退
+             forward()  前进
+             go(参数)  参数1 前进 -1后退
+
+
+        本地数据存储：
+            localStorage.setItem(key, value)    
+            localStorage.getItem(key)    
+            localStorage.removeItem(key)    
+            JSON.stringify(复杂类型数据)  转换数据对象成json个数字符串
+            JSON.parse("JSON字符串") 转换json数据成对象
+
+        自定义属性：    
+           在dom中找不到，必须使用专门的API操作
+           setAttribute("属性名")
+           getAttribute("属性名")
+           removeAttribute("属性名")
+
+           data-自定义属性名：
+              H5为了规范自定义属性，自定义属性一律以data-开头
+              在dom中从dataset中获取：target.dataset.uName
+
          */
 
 
 
-     alert(date);
+     localStorage.setItem("uname", "小花")   
+     localStorage.setItem("uAge", 16)   
+     alert(localStorage.getItem("uname"))
     </script>
     <!--外部js  -->
     <!-- <script src="./fileName"></script> -->
