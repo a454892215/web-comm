@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button onclick="alert('啦啦啦')">点击我</button>
+    <span title="title"> 标题</span>
+    <!--  data-id自定义的属性 -->
+    <a href="" data-uName="abc"></a>
+    <script>
+
+    /**
+    1. 字面量创建对象
+        let obj{
+            uname : 'TOM'
+            age : 22
+            sum : function(){}
+        }
+        访问属性:
+        1. obj.uname
+        2. obj['uname']
+        3.变量属性
+            for(let key in obj){
+                console.log(obj[key])
+            }
+            
+    2. 构造函数
+        1. 内置构造函数： 
+            let obj = new Object(); // 构造函数如果没有参数可以省略小括号 let obj = new Object
+            obj.uname = 'tom'
+            obj.age = 22
+            obj.add = function(){}
+            let obj= new Object({uname : 'sam', age : 33})
+        2. 自定义构造函数：
+            function Persion(uname, age, sex){
+                this.uname = uname
+                this.age = age
+                this.sex = sex
+            }
+                    
+
+     */
+
+    </script>
+    <!--外部js  -->
+    <!-- <script src="./fileName"></script> -->
+</body>
+<!-- js脚本写在HTML标签执行后 -->
+
+</html>
