@@ -39,12 +39,48 @@
             let obj= new Object({uname : 'sam', age : 33})
         2. 自定义构造函数：
             function Persion(uname, age, sex){
-                this.uname = uname
+                this.uname = uname // 实例成员
                 this.age = age
                 this.sex = sex
+                this.eat =function(){}
             }
+            Persion.skin = 2 // 静态成员
                     
+        3. instanceof 判断一个对象是否另一个构造函数的实例对象
+           constructor
+            function A(){}
+            function B(){}
+            let obj = new B()
+            console.log(obj instanceof B)
+            console.log(obj.constructor) 指向构造函数本身
 
+        4. 数据类型：
+               简单数据类型：字符串， 数字， 布尔， undefined， null
+               复杂数据类型：对象（如数组）    
+        5. 值传递和引用传递
+           简单数据值传递，复杂数据引用传递
+        6. 推荐使用字面量方式创建对象，而不是Object构造函数
+           Object.assign(obj) 静态方法创建新对象 ？
+           Object.keys(obj) 静态方法获取对象中的所有属性 ？
+           Object.values(obj) 静态方法获取对象中的所有属性值  ？  
+        7.数组
+          let arr = [1, 2, 3]    推荐使用
+          let arr = new Array(1, 2, 3)
+          数组实例函数：forEach, filter,map join,concat, sort, indexOf, reverse
+          静态函数，from伪数组转成数组
+          let str = arr.join('-') 数组转字符串
+          let re = arr.sort(function(a, b){return a b- b;}) // 正序排序
+          arr.forEach(function(item, index, obj)){} // obj数组对象本身
+        8.正则构造函数和正则字面量
+           let reg = /abv/
+           let reg = new RegExp(/abv/);   
+        9. 包装类型
+           String
+           Number
+           Boolean   
+        10. 字符串函数
+            "abc".slice(start, end) 字符串截取
+            "abc".toUpperCase();
      */
 
     </script>
