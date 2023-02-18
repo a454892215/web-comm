@@ -82,11 +82,17 @@
             "abc".slice(start, end) 字符串截取
             "abc".toUpperCase();
         11. 公共函数：toString()
-        12. prototype（原型对象）:
+        12. prototype（原型对象）: https://zhuanlan.zhihu.com/p/537600424
                 给已存在的对象添加新的属性或方法
                 给对象的构造函数添加属性或方法
                 使用 prototype 属性就可以给对象的构造函数添加新的属性
-             JavaScript中获取原型的方式有两种，1.通过构造函数的 prototype 属性  2.通过Object.getPrototypeOf(obj)方法。
+                使用 prototype 的新增函数，不能被对象的新增函数覆盖，只能再使用prototype覆盖
+             JavaScript中获取原型的方式有3种：
+                 1. 通过构造函数的 prototype 属性  
+                 2. 通过Object.getPrototypeOf(obj)方法。
+                 3. 通过对象的__proto__: obj.__proto__
+
+             通过原型实现继承：把某实例对象赋值给原型对象 (Chinese.prototype = new Chinese）
              function Person(){
                 this.name = "zhaoran";
              }
@@ -96,6 +102,9 @@
              var John = new Person();
              alert(John.name);  // "zhaoran"
              alert(John.say()); // "hello world"     
+
+             扩展数组的函数,：
+                 Array.prototype.sum = function(){} // 给数组增加sum函数
 
      */
 
