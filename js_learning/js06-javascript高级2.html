@@ -105,6 +105,26 @@
 
              扩展数组的函数,：
                  Array.prototype.sum = function(){} // 给数组增加sum函数
+        13. this的指向
+            1. 普通函数的this指向调用者
+                function fn(){}
+            2. 构造函数的this 指向实例化对象，调用者
+                function Person(uname, age){
+                    this.uname = uname;
+                    this.age = age;
+                }
+            3.事件处理函数指向事件源：
+                document.addEventListener('click', function(){}); 
+            4.箭头函数的this是上一级作用域的this       
+        14. 严格模式： "use strict" 
+                 1.变量必须定义再使用
+                 2.普通函数总的this指向undefined
+                 3.函数的形参不准重名.  
+        15. 修改this指向          
+                1. call:  funName.call(obj, p1, p2...); 函数中的this指向obj
+                2. apply: funName.apply(obj, [p1, p2]); 函数中的this指向obj
+                3. bind： funName.bind(obj, p1, p2...)(); 函数中的this指向obj,需要加上(),才会调用  
+        }             
 
      */
 
